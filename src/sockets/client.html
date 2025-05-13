@@ -1,0 +1,16 @@
+<!DOCTYPE html><html><body>
+    <h2>Logs de Notificaciones</h2>
+    <ul id="logs"></ul>
+    <script src="https://cdn.socket.io/4/socket.io.min.js"></script>
+    <script>
+      const socket = io('http://localhost:3000');
+      socket.on('taskUpdated', data => {
+        document.getElementById('logs')
+          .innerHTML += `<li>Tarea ${data.id} actualizada a ${data.estado}</li>`;
+      });
+      socket.on('invitation', data => {
+        document.getElementById('logs')
+          .innerHTML += `<li>Invitación al proyecto ${data.proyectoId}</li>`;
+      });
+    </script>
+    </body></html>
