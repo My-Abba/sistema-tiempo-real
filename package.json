@@ -1,0 +1,34 @@
+{
+  "name": "sistema-tiempo-real",
+  "version": "1.0.0",
+  "description": "SENATI",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/index.js",
+    "migrate": "sequelize db:migrate",
+    "seed": "sequelize db:seed:all",
+    "test": "jest --runInBand"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/My-Abba/sistema-tiempo-real.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/My-Abba/sistema-tiempo-real/issues"
+  },
+  "homepage": "https://github.com/My-Abba/sistema-tiempo-real#readme",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "express": "^5.1.0",
+    "express-validator": "^7.2.1",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^1.4.5-lts.2",
+    "pg": "^8.16.0",
+    "sequelize": "^6.37.7",
+    "socket.io": "^4.8.1",
+    "xml2js": "^0.6.2"
+  }
+}
