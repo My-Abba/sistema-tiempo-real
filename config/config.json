@@ -1,23 +1,24 @@
 {
   "development": {
-    "username": "TU_USUARIO",
-    "password": "TU_CONTRASEÑA",
-    "database": "tiempo_real_dev",
+    "username": "postgres",
+    "password": "pachu-2018",  
+    "database": "sistemareal",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "test": {
-    "username": "TU_USUARIO",
-    "password": "TU_CONTRASEÑA",
+    "username": "postgres",
+    "password": "pachu-2018",
     "database": "tiempo_real_test",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "production": {
-    "username": "TU_USUARIO",
-    "password": "TU_CONTRASEÑA",
+    "username": "postgres",
+    "password": "pachu-2018",
     "database": "tiempo_real_prod",
     "host": "127.0.0.1",
     "dialect": "postgres"
   }
 }
+

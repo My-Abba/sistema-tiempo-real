@@ -1,13 +1,14 @@
 module.exports = (sequelize, DataTypes) => {
-  const User = sequelize.define('User', {
-    name: DataTypes.STRING,
-    email: { type: DataTypes.STRING, unique: true },
-    password: DataTypes.STRING,
-    role: DataTypes.ENUM('admin','miembro','invitado')
+  const Usuario = sequelize.define('Usuario', {
+    nombre: DataTypes.STRING,
+    email: DataTypes.STRING,
+    contraseña: DataTypes.STRING,
+    rol: DataTypes.STRING,
   });
-  User.associate = models => {
-    User.hasMany(models.Project, { foreignKey: 'creatorId' });
-    User.belongsToMany(models.Project, { through: 'ProjectUser', as: 'collaborations' });
+  Usuario.associate = models => {
+    Usuario.hasMany(models.Proyecto, { foreignKey: 'usuario_id' });
+    Usuario.belongsToMany(models.Proyecto, { through: 'ProyectoUsuario' });
+    Usuario.hasMany(models.Tarea, { foreignKey: 'asignado_a' });
   };
-  return User;
+  return Usuario;
 };
