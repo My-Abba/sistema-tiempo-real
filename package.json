@@ -22,6 +22,7 @@
   "homepage": "https://github.com/My-Abba/sistema-tiempo-real#readme",
   "dependencies": {
     "bcrypt": "^6.0.0",
+    "cors": "^2.8.5",
     "express": "^5.1.0",
     "express-validator": "^7.2.1",
     "jsonwebtoken": "^9.0.2",
@@ -33,6 +34,7 @@
   },
   "devDependencies": {
     "jest": "^29.7.0",
+    "nodemon": "^3.1.10",
     "socket.io-client": "^4.8.1",
     "supertest": "^7.1.1"
   }
